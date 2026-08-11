@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Jogos de Futebol</title>
+    <style>
+        header {
+            background-color: #FFFFFF;
+            color: #000000;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 5px solid #e72e2e;
+            padding: 13px;
+            text-align: center;
+        }
+        main {
+            background-color: #FFFFFF;
+            color: #000000;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 13px;
+        }
+        article {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            text-align: left;
+        }
+        article img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .artigo-conteudo {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .artigo-autor {
+            font-weight: bold;
+            margin: 0;
+        }
+        .legenda {
+            font-style: italic;
+            color: #555;
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+        button {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 15px;
+            margin-right: 5px;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Meu blog de jogos</h1>
+        <p>Vou compartilhar meu conhecimento sobre jogos de futebol</p>
+    </header> 
+
+    <main>
+        <article>
+            <img src="imagem-blog.png" alt="Carta FIFA do jogador Roma">
+            <div class="artigo-conteudo">
+                <h2>Meu primeiro post</h2>
+                <p class="artigo-autor">Por: Roma</p>
+                <p>Boas vindas ao meu novo blog sobre curiosidades sobre jogos de futebol.
+                Aqui vou falar sobre jogadores, jogos de futebol, eventos de jogos e varias outras coisas</p>
+                <p class="legenda"></p>
+                <div>
+                    <button>❤️ <span>0</span></button>
+                    <button>👍 <span>0</span></button>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <img src="imagem-blog2.png" alt="Carta FIFA do jogador Roma">
+            <div class="artigo-conteudo">
+                <h2>Meu segundo post</h2>
+                <p class="artigo-autor">Por: Roma</p>
+                <p>Mais curiosidades incríveis sobre o mundo dos jogos de futebol!</p>
+                <div>
+                    <button>❤️ <span>0</span></button>
+                    <button>👍 <span>0</span></button>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <img src="imagem-blog3.png" alt="Carta FIFA do jogador Roma">
+            <div class="artigo-conteudo">
+                <h2>Meu terceiro post</h2>
+                <p class="artigo-autor">Por: Roma</p>
+                <p>Imagem detalhada de como são as stats do seu jogador no meio de uma partida.</p>
+                <div>
+                    <button>❤️ <span>0</span></button>
+                    <button>👍 <span>0</span></button>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <img src="imagem-blog4.png" alt="Carta FIFA do jogador Roma">
+            <div class="artigo-conteudo">
+                <h2>Meu quarto post</h2>
+                <p class="artigo-autor">Por: Roma</p>
+                <p>Análise de estatísticas e atributos dos jogadores em games virtuais.</p>
+                <div>
+                    <button>❤️ <span>0</span></button>
+                    <button>👍 <span>0</span></button>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <img src="imagem-blog5.png" alt="Carta FIFA do jogador Roma">
+            <div class="artigo-conteudo">
+                <h2>Meu quinto post</h2>
+                <p class="artigo-autor">Por: Roma</p>
+                <p>Visual de um dos melhores jogadores do meu país "Brasil".</p>
+                <div>
+                    <button>❤️ <span>0</span></button>
+                    <button>👍 <span>0</span></button>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <img src="imagem-blog6.png" alt="Carta FIFA do jogador Roma">
+            <div class="artigo-conteudo">
+                <h2>Meu sexto post</h2>
+                <p class="artigo-autor">Por: Roma</p>
+                <p>Análise de uma carta de um jogador do jogo FIFA26 do evento centuriões.
+                Essa carta é uma de várias variantes de outras cartas desse mesmo evento do FIFA26.</p>
+                <div>
+                    <button>❤️ <span>0</span></button>
+                    <button>👍 <span>0</span></button>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        const botoes = document.querySelectorAll("button");
+        
+        botoes.forEach(function (botao) {
+            botao.addEventListener("click", function () {
+                let span = botao.querySelector("span");
+                let contadorAtual = parseInt(span.textContent, 10);
+                span.textContent = contadorAtual + 1;
+            });
+        });
+    </script>
+</body>
+</html>
